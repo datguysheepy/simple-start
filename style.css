@@ -15,7 +15,6 @@
 	--btnBgBorderColor: #333333;
 	--btnTextColor: #fafafa;
 	--btnShadowColor: #8a8a8a;
-
 }
 
 html,
@@ -289,20 +288,29 @@ body {
 .settings-area#bookmarks-darkmode {
 	margin-top: 21px;
 	display: flex;
-	align-items: center;
+	
 	padding-bottom: 21px;
 	border-bottom: 1px solid var(--borderColor);
+	flex-direction: column;
 }
 
-.settings-area#bookmarks-darkmode h4 {
+.settings-area#bookmarks-darkmode label {
 	text-transform: uppercase;
 	margin: 0;
 	font-size: 1rem;
+	font-weight: bold;
 }
 
 .settings-area#bookmarks-darkmode input {
 	align-self: flex-start;
 	margin: 0 4px;
+}
+
+.settings-area#bookmarks-darkmode #darkmode-auto-note {
+	margin: 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: normal;
 }
 
 .settings-area#bookmarks-gridgap {
