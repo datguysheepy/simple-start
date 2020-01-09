@@ -235,7 +235,7 @@ body {
 	font-size: 0.7rem;
 	color: var(--secondTextColor);
 	margin: 4px 0;
-	margin-top: 12px;
+	display: inline;
 }
 
 .settings-area#bookmarks-background #background-solid {
@@ -285,10 +285,31 @@ body {
 	opacity: 0.8;
 }
 
+#custom-color {
+	height: 50px;
+	padding: 0;
+	border: none;
+	opacity: 0;
+	display: block;
+	width: 67.2px;
+	opacity: 0;
+}
+
+#custom-color--bg {
+	width: 67.2px;
+	background-color: #6526ca;
+	height: 50px;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+#custom-color--cb {
+	height: 11px;
+}
+
 .settings-area#bookmarks-darkmode {
 	margin-top: 21px;
 	display: flex;
-	
 	padding-bottom: 21px;
 	border-bottom: 1px solid var(--borderColor);
 	flex-direction: column;

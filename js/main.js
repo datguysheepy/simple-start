@@ -2,6 +2,15 @@ feather.replace();
 //clearing storage 
 //var clearing = browser.storage.sync.clear();
 
+//let custom_color_checkbox = document.getElementById("custom-color--cb");
+//console.log(custom_color_checkbox.checked);
+//let custom_color = document.getElementById("custom-color");
+//let custom_color_wrapper = document.getElementById("custom-color--bg");
+/*custom_color.onchange = () => {
+	console.log(custom_color_checkbox.checked);
+	custom_color_wrapper.style.backgroundColor = custom_color.value;
+	document.documentElement.style.setProperty('--documentBgColor', custom_color.value);  
+}*/
 //function to search for folders or bookmarks id's - that is needed to make, delete, edit or search for bookmark/folder.
 function idSearch(bookmarkItems) {
 	for (item of bookmarkItems) {
@@ -318,6 +327,13 @@ document.getElementById('btn-save').onclick = function savingSettings() {
 				documentBgColor: solid_color[i].value
 			});
 		}
+	}
+
+	if(custom_color.value !== "#fcfcfc"){
+		console.log("niestety weszlo");
+		browser.storage.sync.set({
+			documentBgColor: custom_color.value
+		});
 	}
 
 	var gridgap = document.getElementById('gridgap').value;
