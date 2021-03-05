@@ -1,7 +1,7 @@
-{	
+{
 	"manifest_version": 2,
 	"name": "Simple Start",
-	"version": "1.0.5",
+	"version": "2.0.0",
 	"description": "Minimalistic new tab page extension. Organize bookmarks into groups - be more productive with bookmarks sorted by groups for your Work, Home and Hobbies.",
 	"author": "datguysheepy",
 	"homepage_url": "https://simplestart.mtymon.me/",
@@ -14,17 +14,22 @@
 	"permissions": ["bookmarks", "storage"],
 
 	"chrome_url_overrides": {
-		"newtab": "simplestart.html"
+		"newtab": "start.html"
 	},
 
-  	"chrome_settings_overrides": {
-		"homepage": "simplestart.html"
+	"chrome_settings_overrides": {
+		"homepage": "start.html"
 	},
 
 	"browser_specific_settings": {
-	  	"gecko": {
+		"gecko": {
 			"id": "{6938c509-173c-416e-b440-69a7218af76f}",
 			"strict_min_version": "55.0"
-	  	}
-	}    
+		}
+	},
+
+	"options_ui": {
+		"page": "index.html",
+		"open_in_tab": true
+	}
 }
